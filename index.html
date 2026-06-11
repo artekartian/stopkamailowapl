@@ -5,6 +5,8 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Stopka mailowa dla firm | automatyczne podpisy w Microsoft 365</title>
 <meta name="description" content="Automatyczna stopka mailowa dla firm w Microsoft 365. Spójne podpisy, dane z Entra ID, centralne zarządzanie – taniej niż CodeTwo."/>
+<link rel="icon" href="fav.ico" type="image/x-icon">
+
 <style>
 /* ===== RESET & ROOT ===== */
 :root{
@@ -94,9 +96,9 @@ ul,ol{list-style:none}
 .mob nav a:hover{background:#f6faff}
 .mob-cta{display:grid;gap:10px;margin-top:12px}
 
-/* ===== HERO ===== */
-.hero{padding:44px 0 30px}
-.hero-g{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;min-height:calc(100vh - 110px)}
+/* ===== HERO — FIXED: auto height, reduced padding ===== */
+.hero{padding:28px 0 18px}
+.hero-g{display:grid;grid-template-columns:1.05fr .95fr;gap:32px;align-items:center;min-height:auto}
 .hero h1{margin:16px 0 14px;font-size:clamp(2.2rem,5.8vw,4.2rem);line-height:1.02;letter-spacing:-.045em;max-width:13ch}
 .hero .accent{background:linear-gradient(135deg,var(--brand),var(--brand2) 45%,var(--brand3));
   -webkit-background-clip:text;background-clip:text;color:transparent}
@@ -104,10 +106,10 @@ ul,ol{list-style:none}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap;margin-top:26px}
 .hero-checks{display:flex;gap:16px;flex-wrap:wrap;margin-top:16px;color:#475569;font-size:.92rem;font-weight:700}
 .hero-checks span{display:inline-flex;align-items:center;gap:8px}
-.hero-checks span::before{content:"✓";color:var(--ok);font-weight:900}
+.hero-checks span::before{content:"✔";color:var(--ok);font-weight:900}
 
 /* Hero demo card */
-.hc{padding:22px;min-height:520px;position:relative;overflow:hidden;
+.hc{padding:22px;position:relative;overflow:hidden;
   background:radial-gradient(circle at 90% 0%,rgba(37,99,235,.1),transparent 24%),
   radial-gradient(circle at 10% 100%,rgba(14,165,233,.09),transparent 30%),
   linear-gradient(180deg,#fff,#f7fbff)}
@@ -261,14 +263,12 @@ ul,ol{list-style:none}
   .hero-g,.contact-g{grid-template-columns:1fr}
   .trust-g,.g3,.prices,.steps,.ftr-g{grid-template-columns:repeat(2,1fr)}
   .faq-g{grid-template-columns:1fr}
-  .hc{min-height:auto}
 }
 @media(max-width:900px){
   .nl,.na .btn-s{display:none}
   .mbtn{display:inline-flex}
   .na{justify-self:end}
   .trust-g,.g3,.g2,.prices,.steps,.ftr-g,.stats{grid-template-columns:1fr}
-  .hero-g{min-height:auto}
   .section{padding:64px 0}
 }
 @media(max-width:640px){
@@ -277,6 +277,143 @@ ul,ol{list-style:none}
   .hero-btns,.c-btns,.mob-cta{display:grid;grid-template-columns:1fr;gap:10px}
   .btn{width:100%}
 }
+
+
+/* ===== VS COMPARISON ===== */
+.vs-grid{
+  display:grid;
+  grid-template-columns:1fr auto 1fr;
+  gap:0;
+  align-items:stretch;
+}
+.vs-col{
+  padding:28px;
+  display:flex;flex-direction:column;
+}
+.vs-ours{
+  border:1.5px solid #9cc5ff;
+  box-shadow:0 18px 44px rgba(37,99,235,.12);
+  background:linear-gradient(180deg,#ffffff,#f8fbff);
+}
+.vs-them{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(255,255,255,.7),rgba(245,248,253,.7));
+}
+.vs-them .vs-name{color:#64748b}
+
+.vs-head{
+  margin-bottom:22px;
+  display:grid;gap:4px;
+}
+.vs-name{
+  font-size:1.3rem;font-weight:900;letter-spacing:-.03em;
+}
+.vs-sub{
+  color:var(--muted);font-size:.94rem;
+}
+.vs-badge-win{
+  display:inline-flex;align-items:center;gap:6px;width:max-content;
+  padding:6px 12px;border-radius:999px;margin-bottom:6px;
+  background:linear-gradient(135deg,#ecfdf3,#f0fdf6);
+  border:1px solid #bbf7d0;
+  color:#15803d;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;
+}
+.vs-badge-win::before{
+  content:"";width:8px;height:8px;border-radius:50%;
+  background:#22c55e;
+  box-shadow:0 0 0 4px rgba(34,197,94,.16);
+}
+
+.vs-list{
+  display:grid;gap:14px;
+}
+.vs-list li{
+  display:grid;grid-template-columns:auto 1fr;gap:12px;align-items:flex-start;
+}
+.vs-list li strong{
+  display:block;font-size:.98rem;
+}
+.vs-list li span{
+  display:block;color:var(--muted);font-size:.88rem;margin-top:1px;
+}
+.vs-yes,.vs-no{
+  width:22px;height:22px;border-radius:50%;
+  flex:0 0 auto;
+  position:relative;
+  margin-top:3px;
+}
+.vs-yes{background:#ecfdf3;border:1px solid #bbf7d0}
+.vs-no{background:#fef2f2;border:1px solid #fecaca}
+
+/* Checkmark — czyste CSS */
+.vs-yes::after{
+  content:"";
+  position:absolute;
+  left:7px;top:4px;
+  width:5px;height:10px;
+  border:solid #16a34a;
+  border-width:0 2px 2px 0;
+  transform:rotate(45deg);
+}
+
+/* X mark — czyste CSS */
+.vs-no::before,.vs-no::after{
+  content:"";
+  position:absolute;
+  left:50%;top:50%;
+  width:2px;height:10px;
+  background:#dc2626;
+  border-radius:1px;
+}
+.vs-no::before{transform:translate(-50%,-50%) rotate(45deg)}
+.vs-no::after{transform:translate(-50%,-50%) rotate(-45deg)}
+
+.vs-sep{
+  display:flex;flex-direction:column;align-items:center;
+  justify-content:center;padding:0 18px;
+}
+.vs-sep-line{
+  width:2px;flex:1;
+  background:linear-gradient(180deg,transparent,var(--line) 20%,var(--line) 80%,transparent);
+}
+.vs-sep-badge{
+  width:42px;height:42px;border-radius:50%;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,#0f172a,#1e3a5c);
+  color:#fff;font-weight:900;font-size:.82rem;letter-spacing:.04em;
+  box-shadow:0 8px 20px rgba(15,23,42,.18);
+  margin:12px 0;
+  flex:0 0 auto;
+}
+
+@media(max-width:900px){
+  .vs-grid{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+  .vs-sep{
+    flex-direction:row;
+    padding:8px 0;
+  }
+  .vs-sep-line{
+    width:auto;height:2px;flex:1;
+    background:linear-gradient(90deg,transparent,var(--line) 20%,var(--line) 80%,transparent);
+  }
+}
+
+.vs-badge-lose{
+  display:inline-flex;align-items:center;gap:6px;width:max-content;
+  padding:6px 12px;border-radius:999px;margin-bottom:6px;
+  background:linear-gradient(135deg,#fef2f2,#fff5f5);
+  border:1px solid #fecaca;
+  color:#dc2626;font-size:.78rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;
+}
+.vs-badge-lose::before{
+  content:"";width:8px;height:8px;border-radius:50%;
+  background:#ef4444;
+  box-shadow:0 0 0 4px rgba(239,68,68,.16);
+}
+
 </style>
 </head>
 <body>
@@ -284,7 +421,7 @@ ul,ol{list-style:none}
 <!-- ===== HEADER ===== -->
 <header class="hdr">
 <div class="wrap nav">
-  <a href="#top" class="brand"><i>S</i> <span><b>stopka</b>mailowa.pl</span></a>
+  <a href="#top" class="brand"><img src="logo-32.png" alt="CloudPC.pl"><!-- <i>S</i> --> <span><b>stopka</b>mailowa.pl</span></a>
   <nav class="nl">
     <a href="#problem">Problem</a>
     <a href="#jak-to-dziala">Jak to działa</a>
@@ -323,17 +460,17 @@ ul,ol{list-style:none}
 <section class="hero">
 <div class="wrap hero-g">
   <div class="reveal visible">
-    <span class="eyebrow">SaaS dla firm z Microsoft 365</span>
-    <h1>Profesjonalna <span class="accent">stopka mailowa</span> bez chaosu</h1>
-    <p class="hero-lead">Jedna usługa dla całej firmy. Spójne podpisy, dane pracowników z&nbsp;Entra&nbsp;ID, centralne zarządzanie i&nbsp;prosty abonament&nbsp;– taniej niż rozbudowane platformy.</p>
+    <span class="eyebrow">Automatyczne podpisy e-mail</span>
+    <h1>Profesjonalna <span class="accent">stopka mailowa</span> w Microsoft&nbsp;365</h1>
+    <p class="hero-lead">Spójne podpisy e-mail, dane pracowników z&nbsp;Microsoft&nbsp;365, centralne zarządzanie i&nbsp;prosty abonament&nbsp;– zawsze taniej niż rozbudowane platformy. Nie przekierowujemy poczty na zewnętrzne serwery, nie przetwarzamy treści wiadomości i nie mamy dostępu do Twoich maili.</p>
     <div class="hero-btns">
       <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/RedFlag1@redflag.com.pl" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
       <a class="btn btn-s" href="#cennik">Zobacz pakiety</a>
     </div>
     <div class="hero-checks">
-      <span>Microsoft 365</span>
-      <span>Bez instalacji u&nbsp;pracowników</span>
-      <span>Prosty abonament</span>
+      <span>Od 149 zł</span>
+      <span>Porządek na lata</span>
+      <span>Szybkie wdrożenie</span>
     </div>
   </div>
 
@@ -371,8 +508,8 @@ ul,ol{list-style:none}
     </div>
     <div class="stats">
       <div class="stat"><strong>100%</strong><span>spójności</span></div>
-      <div class="stat"><strong>0 min</strong><span>pracy pracownika</span></div>
-      <div class="stat"><strong>23+</strong><span>atrybuty Entra</span></div>
+      <div class="stat"><strong>1 min</strong><span>pracy pracownika</span></div>
+      <div class="stat"><strong>23+</strong><span>atrybuty M365</span></div>
     </div>
   </div>
 </div>
@@ -383,8 +520,8 @@ ul,ol{list-style:none}
 <div class="wrap">
   <div class="trust-g reveal">
     <div class="ti"><div class="ti-ic">☁️</div><div><strong>Microsoft 365</strong><span>Natywna integracja</span></div></div>
-    <div class="ti"><div class="ti-ic">🔑</div><div><strong>Entra ID / Azure AD</strong><span>Dane pracowników</span></div></div>
-    <div class="ti"><div class="ti-ic">📧</div><div><strong>Exchange Online</strong><span>Reguły transportowe</span></div></div>
+    <div class="ti"><div class="ti-ic">🔑</div><div><strong>Entra ID / Azure AD</strong><span>Dane pracowników z systemu</span></div></div>
+    <div class="ti"><div class="ti-ic">📧</div><div><strong>Bezpieczeństwo</strong><span>Nic nie wychodzi poza Twój M365</span></div></div>
     <div class="ti"><div class="ti-ic">💳</div><div><strong>Prosty abonament</strong><span>Bez ukrytych kosztów</span></div></div>
   </div>
 </div>
@@ -402,7 +539,7 @@ ul,ol{list-style:none}
     <div class="fc card reveal">
       <div class="fc-ic">😤</div>
       <h3>Chaos w&nbsp;podpisach</h3>
-      <p>Różne fonty, brak logo, nieaktualne numery telefonów. Firma wysyła setki maili dziennie&nbsp;– i&nbsp;każdy wygląda inaczej.</p>
+      <p>Różne czcionki, brak logo, nieaktualne numery telefonów. Firma wysyła setki maili dziennie&nbsp;– i&nbsp;każdy wygląda inaczej.</p>
     </div>
     <div class="fc card reveal">
       <div class="fc-ic">⏳</div>
@@ -423,19 +560,19 @@ ul,ol{list-style:none}
 <div class="wrap">
   <div class="sh reveal">
     <span class="eyebrow">Jak to działa</span>
-    <h2>3&nbsp;kroki do profesjonalnej stopki</h2>
-    <p>Wdrożenie trwa 1–2&nbsp;dni robocze. Pracownicy nie muszą niczego instalować.</p>
+    <h2>3&nbsp;kroki do profesjonalnych podpisów e-mail</h2>
+    <p>Wdrożenie trwa 1–2&nbsp;dni robocze. Szablon dostosowany indywidualnie do firmy.</p>
   </div>
   <div class="steps">
     <div class="step card reveal">
       <div class="step-n">1</div>
       <h3>Audyt domeny i&nbsp;atrybutów</h3>
-      <p>Sprawdzamy atrybuty Entra&nbsp;ID (DisplayName, Title, Phone, MobilePhone, Company, WindowsEmailAddress i inne)&nbsp;– uzupełniamy braki.</p>
+      <p>Sprawdzamy atrybuty Entra&nbsp;ID (Imię i nazwisko, Stanowisko, Telefon służbowy, Telefon komórkowy, Nazwa firmy, Adres e‑mail i inne)&nbsp;– uzupełniamy braki.</p>
     </div>
     <div class="step card reveal">
       <div class="step-n">2</div>
-      <h3>Projekt &amp; reguła Exchange</h3>
-      <p>Tworzymy szablon HTML stopki i&nbsp;konfigurujemy regułę transportową w&nbsp;Exchange Online. Stopka dodawana jest po stronie serwera&nbsp;– automatycznie do&nbsp;każdej nowej wiadomości.</p>
+      <h3>Projekt &amp; reguła M365</h3>
+      <p>Tworzymy szablon HTML stopki i&nbsp;konfigurujemy regułę pocztową w&nbsp;Microsoft 365. Stopka dodawana jest po stronie serwera&nbsp;– automatycznie do&nbsp;każdej nowej wiadomości.</p>
     </div>
     <div class="step card reveal">
       <div class="step-n">3</div>
@@ -452,7 +589,7 @@ ul,ol{list-style:none}
   <div class="sh reveal">
     <span class="eyebrow">Korzyści</span>
     <h2>Co zyskujesz?</h2>
-    <p>Porządek, wizerunek i&nbsp;zero pracy po stronie pracowników.</p>
+    <p>Porządek, wizerunek i&nbsp;jedną&nbsp;minutę pracy po stronie pracowników.</p>
   </div>
   <div class="g3">
     <div class="fc card reveal">
@@ -463,7 +600,7 @@ ul,ol{list-style:none}
     <div class="fc card reveal">
       <div class="fc-ic">⚡</div>
       <h3>Automatyczne dane z&nbsp;Entra&nbsp;ID</h3>
-      <p>Imię, stanowisko, telefon, dział&nbsp;– podstawiane automatycznie. Zmiana w&nbsp;Entra&nbsp;ID = natychmiastowa zmiana w&nbsp;stopce.</p>
+      <p>Imię, stanowisko, telefon, dział&nbsp;– podstawiane automatycznie. Zmiana w&nbsp;Microsoft&nbsp;365 to automatyczna zmiana w&nbsp;stopce.</p>
     </div>
     <div class="fc card reveal">
       <div class="fc-ic">🖼️</div>
@@ -478,7 +615,7 @@ ul,ol{list-style:none}
     <div class="fc card reveal">
       <div class="fc-ic">🔒</div>
       <h3>Bez dostępu do&nbsp;danych</h3>
-      <p>Nie instalujemy oprogramowania. Nie mamy dostępu do treści maili. Konfigurujemy wyłącznie regułę transportową Exchange Online.</p>
+      <p>Nie instalujemy oprogramowania. Nie mamy dostępu do treści maili. Konfigurujemy wyłącznie regułę poczty w Microsoft 365 /  Exchange Online.</p>
     </div>
     <div class="fc card reveal">
       <div class="fc-ic">💰</div>
@@ -495,25 +632,56 @@ ul,ol{list-style:none}
   <div class="sh reveal">
     <span class="eyebrow">Porównanie</span>
     <h2>Dlaczego to ma sens</h2>
-    <p>Nie potrzebujesz rozbudowanej platformy. Potrzebujesz profesjonalnej stopki mailowej&nbsp;– i&nbsp;aby ktoś się nią zajął.</p>
+    <p>Nie potrzebujesz rozbudowanej platformy. Potrzebujesz profesjonalnej stopki&nbsp;– i&nbsp;aby ktoś się nią zajął.</p>
   </div>
-  <div class="card cmp reveal" style="overflow:hidden">
-    <table>
-      <thead>
-        <tr><th></th><th>stopkamailowa.pl</th><th>Duże platformy (np.&nbsp;CodeTwo)</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Cena</td><td class="yes">Niska, prosty abonament</td><td class="no">Wysoka, per‑user licensing</td></tr>
-        <tr><td>Instalacja u&nbsp;pracowników</td><td class="yes">Brak – server‑side</td><td class="no">Agent / add-in lub server</td></tr>
-        <tr><td>Czas wdrożenia</td><td class="yes">1–2 dni robocze</td><td class="no">Konfiguracja + deployment</td></tr>
-        <tr><td>Dane z&nbsp;Entra&nbsp;ID</td><td class="yes">✓ 23+ atrybuty</td><td class="yes">✓ Tak</td></tr>
-        <tr><td>Banery kampanii</td><td class="yes">✓ Centralnie</td><td class="yes">✓ Tak</td></tr>
-        <tr><td>Shared Mailbox</td><td class="yes">✓ Obsługiwane</td><td class="yes">✓ Tak</td></tr>
-        <tr><td>Złożoność</td><td class="yes">Minimalna</td><td class="no">Panel admina, reguły, agenty</td></tr>
-        <tr><td>Dla kogo?</td><td class="yes">Firmy 5–200 osób</td><td class="no">Enterprise / korporacje</td></tr>
-      </tbody>
-    </table>
+
+  <div class="vs-grid">
+    <!-- KOLUMNA: stopkamailowa.pl -->
+    <div class="vs-col vs-ours card reveal">
+      <div class="vs-head">
+        <span class="vs-badge-win">Rekomendowane</span>
+        <strong class="vs-name" style="color:var(--brand)">stopkamailowa.pl</strong>
+        <span class="vs-sub">Usługa dla firm 5–300 osób</span>
+      </div>
+      <ul class="vs-list">
+        <li><span class="vs-yes"></span><div><strong>Poczta zostaje w Twoim tenancie</strong><span>Żaden mail nie opuszcza infrastruktury Microsoft 365</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Bez instalacji u pracowników</strong><span>Stopka dodawana server‑side przez Microsoft 365</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Wdrożenie w 1–2 dni</strong><span>Audyt atrybutów, szablon HTML, reguła transportowa</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>23+ atrybuty Entra ID</strong><span>DisplayName, Title, Phone, Department i inne</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Banery kampanii</strong><span>Centralnie zarządzane, zmiana jednego pliku</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Shared Mailbox</strong><span>Oddzielna stopka per skrzynka współdzielona</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Minimalna złożoność</strong><span>Ty mówisz co chcesz – my konfigurujemy</span></div></li>
+      </ul>
+    </div>
+
+    <!-- SEPARATOR -->
+    <div class="vs-sep reveal">
+      <div class="vs-sep-line"></div>
+      <div class="vs-sep-badge">VS</div>
+      <div class="vs-sep-line"></div>
+    </div>
+
+    <!-- KOLUMNA: Duże platformy -->
+    <div class="vs-col vs-them card reveal">
+      
+    <div class="vs-head">
+      <span class="vs-badge-lose">Nadmiarowe dla MŚP</span>
+      <strong class="vs-name">Duże platformy</strong>
+      <span class="vs-sub">np. CodeTwo, Exclaimer</span>
+    </div>
+
+      <ul class="vs-list">
+        <li><span class="vs-no"></span><div><strong>Poczta przez serwery zewnętrzne</strong><span>Każdy mail firmy przechodzi przez infrastrukturę dostawcy</span></div></li>
+        <li><span class="vs-no"></span><div><strong>Agent lub add‑in</strong><span>Instalacja po stronie klienta lub serwera</span></div></li>
+        <li><span class="vs-no"></span><div><strong>Dłuższy deployment</strong><span>Konfiguracja panelu, testy, rollout</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Atrybuty katalogowe</strong><span>Tak – obsługują dane z Entra ID / Microsoft 365</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Banery kampanii</strong><span>Tak – wbudowane w podpis</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Shared Mailbox</strong><span>Tak – obsługiwane</span></div></li>
+        <li><span class="vs-no"></span><div><strong>Rozbudowany panel admina</strong><span>Nadmiarowy dla firm poniżej 300 osób</span></div></li>
+      </ul>
+    </div>
   </div>
+
 </div>
 </section>
 
@@ -528,41 +696,41 @@ ul,ol{list-style:none}
   <div class="prices">
     <div class="price card reveal">
       <div class="price-k">Start</div>
-      <div><span class="price-v">149 zł</span><br><small>/ miesiąc netto · do 10 użytkowników</small></div>
-      <p>Dla małych firm, które chcą profesjonalnej stopki bez chaosu.</p>
+      <div><span class="price-v">45 zł</span><br><small>/ miesiąc / netto · do 10 użytkowników</small></div>
+      <p>Dla małych firm, które chcą profesjonalnej i automatycznej stopki.</p>
       <ul>
-        <li><span class="tick">✓</span> Szablon stopki HTML</li>
-        <li><span class="tick">✓</span> Dane z Entra ID</li>
-        <li><span class="tick">✓</span> Reguła Exchange Online</li>
-        <li><span class="tick">✓</span> 1 baner kampanii</li>
-        <li><span class="tick">✓</span> Wsparcie e-mail</li>
+        <li><span class="tick">✔</span> Szablon stopki HTML</li>
+        <li><span class="tick">✔</span> Dane z M365</li>
+        <li><span class="tick">✔</span> Konfiguracja poczty</li>
+        <li><span class="tick">✔</span> Stały baner</li>
+        <li><span class="tick">✔</span> Wsparcie e-mail</li>
       </ul>
       <div class="price-cta"><a class="btn btn-s" href="#kontakt" style="width:100%">Wybieram Start</a></div>
     </div>
     <div class="price best card reveal">
       <div class="price-badge">Najpopularniejszy</div>
       <div class="price-k">Business</div>
-      <div><span class="price-v">299 zł</span><br><small>/ miesiąc netto · do 50 użytkowników</small></div>
+      <div><span class="price-v">4.5 zł</span><br><small>/ użytkownik / miesiąc / netto · do 100 użytkowników</small></div>
       <p>Dla firm, które chcą spójny wizerunek i&nbsp;rotacyjne banery kampanii.</p>
       <ul>
-        <li><span class="tick">✓</span> Wszystko ze Start</li>
-        <li><span class="tick">✓</span> Do 3 szablonów (np. działy)</li>
-        <li><span class="tick">✓</span> Rotacyjne banery kampanii</li>
-        <li><span class="tick">✓</span> Shared Mailbox</li>
-        <li><span class="tick">✓</span> Priorytetowe wsparcie</li>
+        <li><span class="tick">✔</span> Wszystko ze Start</li>
+        <li><span class="tick">✔</span> Do 3 szablonów (np. działy)</li>
+        <li><span class="tick">✔</span> Rotacyjne banery kampanii</li>
+        <li><span class="tick">✔</span> Shared Mailbox</li>
+        <li><span class="tick">✔</span> Priorytetowe wsparcie</li>
       </ul>
       <div class="price-cta"><a class="btn btn-p" href="#kontakt" style="width:100%">Wybieram Business</a></div>
     </div>
     <div class="price card reveal">
       <div class="price-k">Enterprise</div>
-      <div><span class="price-v">Wycena</span><br><small>indywidualna · 50+ użytkowników</small></div>
+      <div><span class="price-v">Wycena</span><br><small>indywidualna · 100+ użytkowników</small></div>
       <p>Dla organizacji z wieloma domenami i&nbsp;zaawansowanymi wymaganiami.</p>
       <ul>
-        <li><span class="tick">✓</span> Wszystko z Business</li>
-        <li><span class="tick">✓</span> Wiele domen</li>
-        <li><span class="tick">✓</span> Dedykowany opiekun</li>
-        <li><span class="tick">✓</span> SLA i raportowanie</li>
-        <li><span class="tick">✓</span> Onboarding dla IT</li>
+        <li><span class="tick">✔</span> Wszystko z Business</li>
+        <li><span class="tick">✔</span> Wiele domen</li>
+        <li><span class="tick">✔</span> Dedykowane szablony</li>
+        <li><span class="tick">✔</span> SLA NBD</li>
+        <li><span class="tick">✔</span> Onboarding dla organizacji</li>
       </ul>
       <div class="price-cta"><a class="btn btn-s" href="#kontakt" style="width:100%">Zapytaj o wycenę</a></div>
     </div>
@@ -577,30 +745,31 @@ ul,ol{list-style:none}
     <span class="eyebrow">FAQ</span>
     <h2>Najczęstsze pytania</h2>
   </div>
+
   <div class="faq-g">
+        <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
+      <div class="faq-q"><span>Czy moje maile przechodzą przez zewnętrzne serwery?</span><i>+</i></div>
+      <div class="faq-a">Nie. To kluczowa różnica. Twoja poczta nigdy nie opuszcza Twojej dzierżawy Microsoft 365. Stopka jest dodawana przez regułę pocztową Exchange Online — wewnątrz infrastruktury Microsoftu, którą już masz i której ufasz. Nie przekierowujemy poczty na zewnętrzne serwery, nie przetwarzamy treści wiadomości i nie mamy dostępu do Twoich maili. Niektóre platformy do podpisów wymagają przepuszczenia całej poczty firmowej przez ich własne serwery — co oznacza, że każdy mail z danymi klientów, ofertami i fakturami trafia najpierw do firmy trzeciej. U nas tego ryzyka po prostu nie ma.</div>
+    </div>
     <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
       <div class="faq-q"><span>Gdzie dokładnie dodawana jest stopka?</span><i>+</i></div>
-      <div class="faq-a">Stopka dodawana jest po stronie serwera (Exchange Online) — przez regułę transportową. Oznacza to, że nie wymaga instalacji w Outlooku u pracownika. Dodawana jest automatycznie do każdej nowej wiadomości wychodzącej.</div>
+      <div class="faq-a">Dla nowych wiadomości stopka odawana jest automatycznie po stronie serwera (Exchange Online). Dla wiadomości wysyłanych jako odpowiedzi i przesyłanych dalej, pracownik kopiuje szablon i ustawia stopkę w swoim Outlook.</div>
     </div>
     <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
       <div class="faq-q"><span>Dlaczego nie widzę stopki w folderze „Wysłane"?</span><i>+</i></div>
-      <div class="faq-a">Stopka jest dodawana przez serwer poczty po wysłaniu wiadomości, a nie w Outlooku. Kopia w folderze „Wysłane" pokazuje wersję bez stopki, bo Outlook jej jeszcze „nie zna". Odbiorca jednak widzi pełną, profesjonalną stopkę.</div>
+      <div class="faq-a">Dla nowych maili stopka jest dodawana przez serwer poczty po wysłaniu wiadomości, a nie w Outlooku. Kopia w folderze „Wysłane" pokazuje wersję bez stopki, bo Outlook jej jeszcze „nie zna". Odbiorca jednak widzi pełną, profesjonalną stopkę.</div>
     </div>
     <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
       <div class="faq-q"><span>Czy stopka jest dodawana do odpowiedzi i przekazywanych wiadomości?</span><i>+</i></div>
       <div class="faq-a">Automatyczna stopka dotyczy nowych wiadomości. Dla odpowiedzi i przekazywanych wiadomości (RE:, FW:, ODP:, PD:) pracownik może wstawić podpis ręcznie — wystarczy jednorazowo skopiować go z otrzymanej wiadomości i ustawić w Podpisach Outlooka. Dostarczamy prostą instrukcję.</div>
     </div>
     <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
-      <div class="faq-q"><span>Jak to działa ze skrzynkami współdzielonymi?</span><i>+</i></div>
-      <div class="faq-a">Stopka jest dodawana automatycznie do nowych wiadomości wysyłanych jako skrzynka współdzielona (shared mailbox). Każda skrzynka może mieć oddzielną stopkę. Przy odpowiedziach i forwardach z shared mailbox pracownik ręcznie wybiera odpowiedni podpis.</div>
-    </div>
-    <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
-      <div class="faq-q"><span>Jakie dane z Entra ID są podstawiane?</span><i>+</i></div>
-      <div class="faq-a">Obsługujemy ponad 23 atrybuty, m.in.: DisplayName, FirstName, LastName, Title, Department, Company, Phone, MobilePhone, StreetAddress, City, PostalCode, WindowsEmailAddress i wiele innych. Wystarczy uzupełnić dane w Entra ID.</div>
+      <div class="faq-q"><span>Jakie dane z Microsoft&nbsp;365 są podstawiane?</span><i>+</i></div>
+      <div class="faq-a">Obsługujemy ponad 23 atrybuty, m.in.: Copilot said: Imię i nazwisko, Imię, Nazwisko, Stanowisko, Dział, Nazwa firmy, Telefon służbowy, Telefon komórkowy, Adres, Miasto, Kod pocztowy, Adres e‑mail i wiele innych. Wystarczy uzupełnić dane w Entra ID.</div>
     </div>
     <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
       <div class="faq-q"><span>Czy potrzebuję specjalnej licencji Microsoft 365?</span><i>+</i></div>
-      <div class="faq-a">Nie. Reguły transportowe Exchange Online są dostępne w każdym planie Microsoft 365 z Exchange Online — od Business Basic po Business Premium i E3/E5. Nie potrzebujesz dodatkowej licencji.</div>
+      <div class="faq-a">Nie. Reguły pocztowe Exchange Online są dostępne w każdym planie Microsoft 365 z Exchange Online — od Business Basic po Business Premium i E3/E5. Nie potrzebujesz dodatkowej licencji.</div>
     </div>
   </div>
 </div>
@@ -612,17 +781,17 @@ ul,ol{list-style:none}
   <div class="contact-g">
     <div class="cp card reveal">
       <span class="eyebrow">Kontakt</span>
-      <h2 style="margin-top:14px">Sprawdźmy Twoją domenę</h2>
-      <p>Najszybciej: umów 15&nbsp;minut albo kliknij w&nbsp;gotowy e‑mail. Bez formularzy. Odpowiadamy konkretnie: co trzeba zrobić i&nbsp;ile to kosztuje.</p>
+      <h2 style="margin-top:14px">Zobaczysz swoją nową stopkę w 15 minut</h2>
+      <p>Pokażemy jak będzie wyglądać stopka Twojej firmy. Sprawdzimy dane w M365, zaproponujemy szablon i wycenimy wdrożenie. Bez formularzy ‑ wystarczy 15&nbsp;minut albo jeden e‑mail.</p>
       <div class="c-btns">
         <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/RedFlag1@redflag.com.pl" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
         <a class="btn btn-s" href="mailto:msp@valcreon.com?subject=Stopka%20mailowa%20%E2%80%93%20zapytanie&amp;body=Dzie%C5%84%20dobry%2C%0A%0AProsimy%20o%20kontakt%20w%20sprawie%20automatycznej%20stopki%20mailowej%20w%20Microsoft%20365.%0A%0AFirma%3A%0ALiczba%20u%C5%BCytkownik%C3%B3w%3A%0ADomena%3A%0A%0APozdrawiam">Napisz e&#8209;mail</a>
         <a class="btn btn-s" href="tel:+48221525060">📞 +48 22 152 50 60</a>
       </div>
       <ul class="c-list">
-        <li><i>→</i> 15 minut wystarczy, żeby pokazać jak to działa</li>
-        <li><i>→</i> Link e-mail ma gotową treść – wystarczy wpisać domenę</li>
-        <li><i>→</i> Wdrożenie bez instalacji u pracowników</li>
+        <li><i>→</i> Zobaczysz wizualizację stopki dla swojej firmy</li>
+        <li><i>→</i> Dostaniesz wycenę i harmonogram wdrożenia</li>
+        <li><i>→</i> Minimalny udział pracowników</li>
       </ul>
       <div class="co">
         <strong>Valcreon Sp. z o.o.</strong>
