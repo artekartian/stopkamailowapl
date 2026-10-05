@@ -4,7 +4,7 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
 <title>Stopka mailowa dla firm | automatyczne podpisy w Microsoft 365 | Valcreon</title>
-<meta name="description" content="Automatyczna stopka mailowa dla firm w Microsoft 365. Spójne podpisy, dane z Entra ID, centralne zarządzanie – taniej niż CodeTwo."/>
+<meta name="description" content="Automatyczna stopka mailowa dla firm w Microsoft 365. Pakiety abonamentowe dla firm, centralne zarządzanie, dane z Entra ID i osobno wyceniane wdrożenie."/>
 <link rel="icon" href="fav.ico" type="image/x-icon">
 
 <style>
@@ -214,6 +214,14 @@ ul,ol{list-style:none}
   background:#ecfdf3;border:1px solid #cdeed8;color:#15803d;font-size:.78rem;font-weight:900;flex:0 0 auto;margin-top:1px}
 .price-cta{margin-top:auto}
 
+
+/* ===== WDROŻENIE I CENNIK ===== */
+.setup-note{display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:flex-start;margin:0 0 20px;padding:20px;background:linear-gradient(135deg,#eff6ff,#f8fbff);border:1px solid #cfe1fb;border-radius:var(--r-sm)}
+.setup-note-ic{width:44px;height:44px;border-radius:14px;display:grid;place-items:center;background:#fff;border:1px solid #d8e6f8;color:var(--brand);font-weight:900;font-size:1.15rem}
+.setup-note h3{margin:0 0 4px;font-size:1.08rem}
+.setup-note p{margin:0;color:var(--muted)}
+.price-note{padding:16px;border-radius:14px;background:#f8fbff;border:1px solid #dce7f5;color:#526176;font-size:.9rem}
+@media(max-width:640px){.setup-note{grid-template-columns:1fr;padding:16px}.setup-note-ic{width:36px;height:36px;font-size:.9rem}.price.best{transform:none}}
 /* ===== FAQ ===== */
 .faq-g{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
 .faq-i{padding:22px;cursor:pointer}
@@ -414,14 +422,6 @@ ul,ol{list-style:none}
   box-shadow:0 0 0 4px rgba(239,68,68,.16);
 }
 
-@media (max-width: 768px) {
-  .brand span {
-    display: none;
-  }
-}
-
-
-
 </style>
 </head>
 <body>
@@ -429,7 +429,7 @@ ul,ol{list-style:none}
 <!-- ===== HEADER ===== -->
 <header class="hdr">
 <div class="wrap nav">
-  <a href="#top" class="brand"><img src="logo-32.png" alt="stopkamailowa.pl"><!-- <i>S</i> --> <span><b>stopka</b>mailowa</span></a>
+  <a href="#top" class="brand"><img src="logo-32.png" alt="stopkamailowa.pl"><!-- <i>S</i> --> <span><b>stopka</b>mailowa.pl</span></a>
   <nav class="nl">
     <a href="#problem">Problem</a>
     <a href="#jak-to-dziala">Jak to działa</a>
@@ -440,7 +440,7 @@ ul,ol{list-style:none}
   </nav>
   <div class="na">
     <a class="btn btn-s" href="mailto:msp@valcreon.com?subject=Stopka%20mailowa%20%E2%80%93%20zapytanie&amp;body=Dzie%C5%84%20dobry%2C%0A%0AProsimy%20o%20kontakt%20w%20sprawie%20automatycznej%20stopki%20mailowej%20w%20Microsoft%20365.%0A%0AFirma%3A%0ALiczba%20u%C5%BCytkownik%C3%B3w%3A%0ADomena%3A%0A%0APozdrawiam">Napisz e&#8209;mail</a>
-    <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/ValcreonSessions@valcreon.com" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
+    <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/RedFlag1@redflag.com.pl" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
     <button class="mbtn" id="menuBtn" aria-label="Menu" aria-expanded="false"><span></span></button>
   </div>
 </div>
@@ -457,7 +457,7 @@ ul,ol{list-style:none}
     <a href="#kontakt">Kontakt</a>
   </nav>
   <div class="mob-cta">
-    <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/ValcreonSessions@valcreon.com" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
+    <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/RedFlag1@redflag.com.pl" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
     <a class="btn btn-s" href="mailto:msp@valcreon.com?subject=Stopka%20mailowa%20%E2%80%93%20zapytanie">Napisz e&#8209;mail</a>
   </div>
 </div>
@@ -470,15 +470,15 @@ ul,ol{list-style:none}
   <div class="reveal visible">
     <span class="eyebrow">Automatyczne podpisy e-mail</span>
     <h1>Profesjonalna <span class="accent">stopka mailowa</span> w Microsoft&nbsp;365</h1>
-    <p class="hero-lead">Spójne podpisy e-mail, dane pracowników z&nbsp;Microsoft&nbsp;365, centralne zarządzanie i&nbsp;prosty abonament&nbsp;– zawsze taniej niż rozbudowane platformy. Nie przekierowujemy poczty na zewnętrzne serwery, nie przetwarzamy treści wiadomości i nie mamy dostępu do Twoich maili.</p>
+    <p class="hero-lead">Spójne podpisy e-mail, dane pracowników z&nbsp;Microsoft&nbsp;365, centralne zarządzanie i&nbsp;pakietowy abonament dopasowany do wielkości firmy. Nie przekierowujemy poczty na zewnętrzne serwery, nie przetwarzamy treści wiadomości i nie mamy dostępu do Twoich maili.</p>
     <div class="hero-btns">
-      <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/ValcreonSessions@valcreon.com" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
+      <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/RedFlag1@redflag.com.pl" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
       <a class="btn btn-s" href="#cennik">Zobacz pakiety</a>
     </div>
     <div class="hero-checks">
-      <span>Od 45 zł</span>
+      <span>Abonament od 99 zł netto</span>
       <span>Porządek na lata</span>
-      <span>Szybkie wdrożenie</span>
+      <span>Wdrożenie wyceniane osobno</span>
     </div>
   </div>
 
@@ -517,7 +517,7 @@ ul,ol{list-style:none}
     <div class="stats">
       <div class="stat"><strong>100%</strong><span>spójności</span></div>
       <div class="stat"><strong>1 min</strong><span>pracy pracownika</span></div>
-      <div class="stat"><strong>23+</strong><span>atrybuty M365</span></div>
+      <div class="stat"><strong>M365</strong><span>dane z Entra ID</span></div>
     </div>
   </div>
 </div>
@@ -530,7 +530,7 @@ ul,ol{list-style:none}
     <div class="ti"><div class="ti-ic">☁️</div><div><strong>Microsoft 365</strong><span>Natywna integracja</span></div></div>
     <div class="ti"><div class="ti-ic">🔑</div><div><strong>Entra ID / Azure AD</strong><span>Dane pracowników z systemu</span></div></div>
     <div class="ti"><div class="ti-ic">📧</div><div><strong>Bezpieczeństwo</strong><span>Nic nie wychodzi poza Twój M365</span></div></div>
-    <div class="ti"><div class="ti-ic">💳</div><div><strong>Prosty abonament</strong><span>Bez ukrytych kosztów</span></div></div>
+    <div class="ti"><div class="ti-ic">💳</div><div><strong>Przejrzysty model</strong><span>Wdrożenie + miesięczny pakiet</span></div></div>
   </div>
 </div>
 </section>
@@ -569,7 +569,7 @@ ul,ol{list-style:none}
   <div class="sh reveal">
     <span class="eyebrow">Jak to działa</span>
     <h2>3&nbsp;kroki do profesjonalnych podpisów e-mail</h2>
-    <p>Wdrożenie trwa 1–2&nbsp;dni robocze. Szablon dostosowany indywidualnie do firmy.</p>
+    <p>Zakres i koszt wdrożenia ustalamy indywidualnie. Obejmuje ono projekt HTML, konfigurację Microsoft 365, mapowanie danych, testy i uruchomienie usługi.</p>
   </div>
   <div class="steps">
     <div class="step card reveal">
@@ -627,8 +627,8 @@ ul,ol{list-style:none}
     </div>
     <div class="fc card reveal">
       <div class="fc-ic">💰</div>
-      <h3>Prosty, niski koszt</h3>
-      <p>Abonament miesięczny bez ukrytych opłat. Tańsze i prostsze niż duże platformy do zarządzania podpisami.</p>
+      <h3>Przewidywalny koszt</h3>
+      <p>Jednorazowa opłata wdrożeniowa i stały abonament miesięczny. Zakres zmian banerów oraz szablonu wynika z wybranego pakietu.</p>
     </div>
   </div>
 </div>
@@ -649,13 +649,13 @@ ul,ol{list-style:none}
       <div class="vs-head">
         <span class="vs-badge-win">Rekomendowane</span>
         <strong class="vs-name" style="color:var(--brand)">stopkamailowa.pl</strong>
-        <span class="vs-sub">Usługa dla firm 5–300 osób</span>
+        <span class="vs-sub">Pakiety dla firm od kilku użytkowników</span>
       </div>
       <ul class="vs-list">
         <li><span class="vs-yes"></span><div><strong>Poczta zostaje w Twoim tenancie</strong><span>Żaden mail nie opuszcza infrastruktury Microsoft 365</span></div></li>
         <li><span class="vs-yes"></span><div><strong>Bez instalacji u pracowników</strong><span>Stopka dodawana server‑side przez Microsoft 365</span></div></li>
-        <li><span class="vs-yes"></span><div><strong>Wdrożenie w 1–2 dni</strong><span>Audyt atrybutów, szablon HTML, reguła transportowa</span></div></li>
-        <li><span class="vs-yes"></span><div><strong>23+ atrybuty Entra ID</strong><span>DisplayName, Title, Phone, Department i inne</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Kompletne wdrożenie</strong><span>Audyt atrybutów, szablon HTML, konfiguracja i testy</span></div></li>
+        <li><span class="vs-yes"></span><div><strong>Atrybuty Entra ID</strong><span>Imię, stanowisko, telefon, dział i inne uzgodnione dane</span></div></li>
         <li><span class="vs-yes"></span><div><strong>Banery kampanii</strong><span>Centralnie zarządzane, zmiana jednego pliku</span></div></li>
         <li><span class="vs-yes"></span><div><strong>Shared Mailbox</strong><span>Oddzielna stopka per skrzynka współdzielona</span></div></li>
         <li><span class="vs-yes"></span><div><strong>Minimalna złożoność</strong><span>Ty mówisz co chcesz – my konfigurujemy</span></div></li>
@@ -698,54 +698,72 @@ ul,ol{list-style:none}
 <div class="wrap">
   <div class="sh reveal">
     <span class="eyebrow">Cennik</span>
-    <h2>Prosty abonament, pełna obsługa</h2>
-    <p>Wybierz pakiet odpowiedni do wielkości firmy. Cena obejmuje wdrożenie, szablon i&nbsp;utrzymanie.</p>
+    <h2>Pakiet dopasowany do wielkości firmy</h2>
+    <p>Najpierw realizujemy jednorazowe wdrożenie, a następnie utrzymujemy rozwiązanie w ramach wybranego abonamentu.</p>
+  </div>
+  <div class="setup-note reveal">
+    <div class="setup-note-ic">01</div>
+    <div>
+      <h3>Jednorazowa opłata wdrożeniowa</h3>
+      <p>Wdrożenie jest wyceniane osobno. Obejmuje analizę wymagań, projekt stopki HTML, konfigurację Microsoft 365, mapowanie atrybutów Entra ID, publikację grafik, testy oraz uruchomienie produkcyjne. Cena zależy między innymi od liczby szablonów, marek, domen i zakresu danych.</p>
+    </div>
   </div>
   <div class="prices">
     <div class="price card reveal">
       <div class="price-k">Start</div>
-      <div><span class="price-v">45 zł</span><br><small>/ miesiąc / netto · do 10 użytkowników</small></div>
-      <p>Dla małych firm, które chcą profesjonalnej i automatycznej stopki.</p>
+      <div><span class="price-v">99 zł</span><br><small>netto / miesiąc · do 25 użytkowników</small></div>
+      <p>Dla małych firm, które potrzebują jednej spójnej stopki i regularnej obsługi banera.</p>
       <ul>
-        <li><span class="tick">✔</span> Szablon stopki HTML</li>
-        <li><span class="tick">✔</span> Dane z M365</li>
-        <li><span class="tick">✔</span> Konfiguracja poczty</li>
-        <li><span class="tick">✔</span> Stały baner</li>
-        <li><span class="tick">✔</span> Wsparcie e-mail</li>
+        <li><span class="tick">✔</span> Utrzymanie konfiguracji Microsoft 365</li>
+        <li><span class="tick">✔</span> Dane użytkowników z Entra ID</li>
+        <li><span class="tick">✔</span> 1 marka i 1 podstawowy szablon</li>
+        <li><span class="tick">✔</span> 1 rotacja banera miesięcznie</li>
+        <li><span class="tick">✔</span> 1 zmiana szablonu rocznie</li>
+        <li><span class="tick">✔</span> Wsparcie administracyjne</li>
       </ul>
+      <div class="price-note">Opłata wdrożeniowa nie jest zawarta w abonamencie.</div>
       <div class="price-cta"><a class="btn btn-s" href="#kontakt" style="width:100%">Wybieram Start</a></div>
     </div>
     <div class="price best card reveal">
       <div class="price-badge">Najpopularniejszy</div>
       <div class="price-k">Business</div>
-      <div><span class="price-v">4.5 zł</span><br><small>/ użytkownik / miesiąc / netto · do 100 użytkowników</small></div>
-      <p>Dla firm, które chcą spójny wizerunek i&nbsp;rotacyjne banery kampanii.</p>
+      <div><span class="price-v">199 zł</span><br><small>netto / miesiąc · 26–100 użytkowników</small></div>
+      <p>Dla firm, które chcą częściej prowadzić kampanie i aktualizować elementy stopki.</p>
       <ul>
-        <li><span class="tick">✔</span> Wszystko ze Start</li>
-        <li><span class="tick">✔</span> Do 3 szablonów (np. działy)</li>
-        <li><span class="tick">✔</span> Rotacyjne banery kampanii</li>
-        <li><span class="tick">✔</span> Shared Mailbox</li>
-        <li><span class="tick">✔</span> Priorytetowe wsparcie</li>
+        <li><span class="tick">✔</span> Utrzymanie konfiguracji Microsoft 365</li>
+        <li><span class="tick">✔</span> Dane użytkowników z Entra ID</li>
+        <li><span class="tick">✔</span> 1 marka i 1 podstawowy szablon</li>
+        <li><span class="tick">✔</span> Do 2 rotacji banerów miesięcznie</li>
+        <li><span class="tick">✔</span> 1 drobna zmiana szablonu na kwartał</li>
+        <li><span class="tick">✔</span> Wsparcie administracyjne</li>
       </ul>
+      <div class="price-note">Opłata wdrożeniowa nie jest zawarta w abonamencie.</div>
       <div class="price-cta"><a class="btn btn-p" href="#kontakt" style="width:100%">Wybieram Business</a></div>
     </div>
     <div class="price card reveal">
       <div class="price-k">Enterprise</div>
-      <div><span class="price-v">Wycena</span><br><small>indywidualna · 100+ użytkowników</small></div>
-      <p>Dla organizacji z wieloma domenami i&nbsp;zaawansowanymi wymaganiami.</p>
+      <div><span class="price-v">Wycena</span><br><small>indywidualna · powyżej 100 użytkowników</small></div>
+      <p>Dla organizacji z wieloma markami, domenami, szablonami lub indywidualnym zakresem obsługi.</p>
       <ul>
-        <li><span class="tick">✔</span> Wszystko z Business</li>
-        <li><span class="tick">✔</span> Wiele domen</li>
-        <li><span class="tick">✔</span> Dedykowane szablony</li>
-        <li><span class="tick">✔</span> SLA NBD</li>
-        <li><span class="tick">✔</span> Onboarding dla organizacji</li>
+        <li><span class="tick">✔</span> Dedykowane warunki utrzymania</li>
+        <li><span class="tick">✔</span> Wiele marek, domen lub szablonów</li>
+        <li><span class="tick">✔</span> Indywidualny limit rotacji banerów</li>
+        <li><span class="tick">✔</span> Indywidualny zakres zmian szablonu</li>
+        <li><span class="tick">✔</span> Uzgodniony model wsparcia</li>
       </ul>
+      <div class="price-note">Wdrożenie i abonament są wyceniane po analizie wymagań.</div>
       <div class="price-cta"><a class="btn btn-s" href="#kontakt" style="width:100%">Zapytaj o wycenę</a></div>
+    </div>
+  </div>
+  <div class="setup-note reveal" style="margin-top:20px">
+    <div class="setup-note-ic">i</div>
+    <div>
+      <h3>Co oznaczają limity zmian?</h3>
+      <p>Rotacja banera oznacza podmianę gotowej grafiki przekazanej i zaakceptowanej przez Klienta. Zmiana szablonu oznacza modyfikację układu HTML, stylu, pól lub elementów stopki. Dodatkowe zmiany, nowe projekty i osobne szablony są wyceniane przed realizacją. Niewykorzystane zmiany nie przechodzą na kolejne okresy.</p>
     </div>
   </div>
 </div>
 </section>
-
 <!-- ===== FAQ ===== -->
 <section class="section" id="faq" style="background:rgba(237,245,255,.4)">
 <div class="wrap">
@@ -755,6 +773,10 @@ ul,ol{list-style:none}
   </div>
 
   <div class="faq-g">
+    <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
+      <div class="faq-q"><span>Czy wdrożenie jest zawarte w abonamencie?</span><i>+</i></div>
+      <div class="faq-a">Nie. Wdrożenie jest rozliczane jednorazowo i wyceniane po analizie wymagań. Abonament obejmuje późniejsze utrzymanie konfiguracji, wsparcie oraz liczbę zmian banerów i szablonu określoną w wybranym pakiecie.</div>
+    </div>
         <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
       <div class="faq-q"><span>Czy moje maile przechodzą przez zewnętrzne serwery?</span><i>+</i></div>
       <div class="faq-a">Nie. To kluczowa różnica. Twoja poczta nigdy nie opuszcza Twojej dzierżawy Microsoft 365. Stopka jest dodawana przez regułę pocztową Exchange Online — wewnątrz infrastruktury Microsoftu, którą już masz i której ufasz. Nie przekierowujemy poczty na zewnętrzne serwery, nie przetwarzamy treści wiadomości i nie mamy dostępu do Twoich maili. Niektóre platformy do podpisów wymagają przepuszczenia całej poczty firmowej przez ich własne serwery — co oznacza, że każdy mail z danymi klientów, ofertami i fakturami trafia najpierw do firmy trzeciej. U nas tego ryzyka po prostu nie ma.</div>
@@ -773,7 +795,7 @@ ul,ol{list-style:none}
     </div>
     <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
       <div class="faq-q"><span>Jakie dane z Microsoft&nbsp;365 są podstawiane?</span><i>+</i></div>
-      <div class="faq-a">Obsługujemy ponad 23 atrybuty, m.in.: Copilot said: Imię i nazwisko, Imię, Nazwisko, Stanowisko, Dział, Nazwa firmy, Telefon służbowy, Telefon komórkowy, Adres, Miasto, Kod pocztowy, Adres e‑mail i wiele innych. Wystarczy uzupełnić dane w Entra ID.</div>
+      <div class="faq-a">Stopka może wykorzystywać między innymi: Imię i nazwisko, Imię, Nazwisko, Stanowisko, Dział, Nazwa firmy, Telefon służbowy, Telefon komórkowy, Adres, Miasto, Kod pocztowy, Adres e‑mail i wiele innych. Wystarczy uzupełnić dane w Entra ID.</div>
     </div>
     <div class="faq-i card reveal" onclick="this.classList.toggle('open')">
       <div class="faq-q"><span>Czy potrzebuję specjalnej licencji Microsoft 365?</span><i>+</i></div>
@@ -792,7 +814,7 @@ ul,ol{list-style:none}
       <h2 style="margin-top:14px">Zobaczysz swoją nową stopkę w 15 minut</h2>
       <p>Pokażemy jak będzie wyglądać stopka Twojej firmy. Sprawdzimy dane w M365, zaproponujemy szablon i wycenimy wdrożenie. Bez formularzy ‑ wystarczy 15&nbsp;minut albo jeden e‑mail.</p>
       <div class="c-btns">
-        <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/ValcreonSessions@valcreon.com" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
+        <a class="btn btn-p" href="https://bookings.cloud.microsoft/book/RedFlag1@redflag.com.pl" target="_blank" rel="noopener noreferrer">Umów 15&nbsp;min</a>
         <a class="btn btn-s" href="mailto:msp@valcreon.com?subject=Stopka%20mailowa%20%E2%80%93%20zapytanie&amp;body=Dzie%C5%84%20dobry%2C%0A%0AProsimy%20o%20kontakt%20w%20sprawie%20automatycznej%20stopki%20mailowej%20w%20Microsoft%20365.%0A%0AFirma%3A%0ALiczba%20u%C5%BCytkownik%C3%B3w%3A%0ADomena%3A%0A%0APozdrawiam">Napisz e&#8209;mail</a>
         <a class="btn btn-s" href="tel:+48221525060">📞 +48 22 152 50 60</a>
       </div>
@@ -834,7 +856,7 @@ ul,ol{list-style:none}
       <strong>Kontakt</strong>
       <a href="mailto:msp@valcreon.com">msp@valcreon.com</a>
       <a href="tel:+48221525060">+48 22 152 50 60</a>
-      <a href="https://bookings.cloud.microsoft/book/ValcreonSessions@valcreon.com" target="_blank" rel="noopener noreferrer">Umów rozmowę</a>
+      <a href="https://bookings.cloud.microsoft/book/RedFlag1@redflag.com.pl" target="_blank" rel="noopener noreferrer">Umów rozmowę</a>
       <a href="https://valcreon.com" target="_blank" rel="noopener noreferrer">valcreon.com</a>
     </div>
   </div>
